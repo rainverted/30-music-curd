@@ -13,34 +13,28 @@ class Artist {
     }
 
     addSong(songName) {
-        let song = { songName };
+        let song = {
+            songName,
+            repeat: 0                   //sukuriame nauja parametra, kad galetume suskaiciuoti grotu dainu skaiciu (1)
+        };
         this.list.push(song);
-        // console.log(song);
+        console.log(song);
     }
 
     playlist() {
         console.log(`${this.artistName}'s playlist:`);
         console.log(`====================`);
 
-
         for (let i = 0; i < this.list.length; i++) {
             const song = this.list[i];
-
-            //console.log(songCount);
-            console.log(`${i + 1}. ${song.songName} (${song.songCount})`);
+            console.log(`${i + 1}. ${song.songName} (${song.repeat})`);             //gauta suma pagal parametra repeat isspausdiname(3)
         }
-
     }
 
     playSong(index) {
+        const song = this.list[index]
         const songName = this.list[index].songName;
-        for (let i = 0; i < this.list.length; i++) {
-            const song = this.list[i];
-
-            if (song) {
-                song.songCount += 1;
-            }
-        }
+        song.repeat += 1;                                           //kai dainos [i] reiksme nurodoma metode, naujas parametras prideda pakartojimas ir suskaiciuoja suma (2)
         console.log(`Playing song: ${songName} .`);
     }
 
