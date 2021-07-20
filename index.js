@@ -44,26 +44,26 @@ raimonda.playlist();
 // 3. Oj lijo lijo (1)
 // 4. Kai grazumo (2)
 
-// raimonda.fortune();
-// // Total lifetime wealth of Raimonda is 1.05 EUR right now!
+raimonda.fortune();
+// Total lifetime wealth of Raimonda is 1.05 EUR right now!
 
-// raimonda.songPrice(25);
-// // Raimonda's price per song is 0.25 EUR;
+raimonda.songPrice(25);
+// Raimonda's price per song is 0.25 EUR;
 
-// raimonda.playSong(2);
-// // Playing song: Oj lijo lijo.
-// raimonda.playSong(0);
-// // Playing song: Bumciki.
-// raimonda.playSong(3);
-// // Playing song: Kai grazumo.
+raimonda.playSong(2);
+// Playing song: Oj lijo lijo.
+raimonda.playSong(0);
+// Playing song: Bumciki.
+raimonda.playSong(3);
+// Playing song: Kai grazumo.
 
-// raimonda.playlist();
-// // Raimonda's playlist:
-// // ====================
-// // 1. Bumciki (4)
-// // 2. Tra lia lai (1)
-// // 3. Oj lijo lijo (2)
-// // 4. Kai grazumo (3)
+raimonda.playlist();
+// Raimonda's playlist:
+// ====================
+// 1. Bumciki (4)
+// 2. Tra lia lai (1)
+// 3. Oj lijo lijo (2)
+// 4. Kai grazumo (3)
 
-// raimonda.fortune();
-// // Total lifetime wealth of Raimonda is 1.80 EUR right now!
+raimonda.fortune();
+// Total lifetime wealth of Raimonda is 1.80 EUR right now!
