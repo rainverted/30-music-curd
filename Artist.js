@@ -2,14 +2,18 @@ class Artist {
     constructor(artistName) {
         this.artistName = artistName;
         this.list = [];
+        this.profit = 0;
+        this.price = 0;
     }
 
     intro() {
         console.log(`Hi, my name is ${this.artistName} and I am a musician!`);
     }
 
-    songPrice(songPrice) {
-        console.log(`${this.artistName}'s price per song is ${songPrice / 100} EUR`);
+    songPrice(price) {
+        this.price = price;
+        console.log(`${this.artistName}'s price per song is ${price / 100} EUR`);
+
     }
 
 
@@ -17,10 +21,9 @@ class Artist {
         let song = {
             songName,
             repeat: 0,              //sukuriame nauja parametra, kad galetume suskaiciuoti grotu dainu skaiciu (1)
-            profit: 0
         };
         this.list.push(song);
-        console.log(song);
+
     }
 
     playlist() {
@@ -34,27 +37,20 @@ class Artist {
     }
 
     playSong(index) {
-        const song = this.list[index];
-        const songName = this.list[index].songName;
-        song.repeat += 1;                                           //kai dainos [i] reiksme nurodoma metode, naujas parametras prideda pakartojima ir suskaiciuoja suma (2)
+        let songName = this.list[index].songName;
         for (let i = 0; i < this.list.length; i++) {
+            const song = this.list[i];
             if (i === index) {
-                song.profit += this.list.songPrice;
+                song.repeat++;                                           //kai dainos [i] reiksme nurodoma metode, naujas parametras prideda pakartojima ir suskaiciuoja suma (2)
             }
         }
-
+        this.profit += this.price;
         console.log(`Playing song: ${songName} .`);
     }
 
     fortune() {
-        let profit = 0;
-        for (let i = 0; i < this.list.length; i++) {
-            profit += this.list[i].profit;
-        }
-        console.log(`Total lifetime wealth of ${this.artistName} is ${profit} EUR right now!`);
+        console.log(` Total lifetime wealth of ${this.vardas} is ${(this.profit / 100).toFixed(2)} EUR right now!`);
     }
-
-
 }
 
 module.exports = Artist;
